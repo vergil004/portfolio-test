@@ -1,0 +1,225 @@
+*{
+    font-family: Arial;
+    box-sizing: border-box;
+}
+input, textarea, button{
+    color: #000;
+}
+table{
+    border-collapse: collapse;
+}
+table, table td{
+    border:1px solid #000;
+}
+.layout{
+    width: 1200px;
+    margin: 0 auto;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.red{
+    color:rgba(255,0,0,.5);
+    background-color: black;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+.red::first-letter{
+    font-size: 30px;
+}
+.title{
+    color:red;
+}
+h1{
+    margin-top: 66px;
+}
+h2{
+    color:green;
+}
+#video{
+    background-color: rgba(0,255,0,0.4);
+}
+.block{
+    position: relative;
+    background-color: rgba(0,0,255, 0.4);
+    font-size: 16px;
+}
+.block img{
+    position: absolute;
+    top:-100%;
+    right:0;
+    margin: 0 0 16px 16px;
+}
+.block--one p{
+    font-style: oblique;
+    font-weight: 600;
+    line-height: 30px;
+}
+.block--one span{
+    text-transform: lowercase;
+}
+section{
+    background-color: rgba(255,0,0,0.4);
+}
+li + li{
+    background-color: yellow;
+}
+a{
+    text-decoration: none;
+}
+p::first-line{
+    color:green;
+}
+p::first-letter{
+    color:blue;
+    font-size: 30px;
+}
+a:visited{
+    color: orange;
+}
+button:disabled{
+    opacity: .5;
+}
+.price:after{
+    content: ' руб'
+}
+.price:before{
+    content: 'Цена товара '
+}
+p{
+    text-indent: 10px;
+}
+.clearfix {
+ zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+ content: "";
+ display: table;
+}
+.clearfix:after {
+ clear: both;
+}
+header{
+    background-color: #000000;
+    /*position: fixed;*/
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.header{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.header a{
+    display: block;
+    background-color: red;
+    border-radius: 10px;
+    color: #fff;
+    padding: 4px 16px ;
+}
+
+.product__list{
+    padding: 40px 16px;
+    flex-wrap: wrap;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.product__item{
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    width: 100%;
+    order:3;
+}
+.product__image{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+.product__bottom{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.product__button{
+    border: none;
+    background-color: darkgreen;
+    color: #ffffff;
+    border-radius: 6px;
+    display: inline-flex;
+    height: 40px;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.insta{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.insta__post{
+    width: 100%;
+}
+.insta__photo img{
+    width: 100%;
+}
+.insta__like{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.insta__like img{
+    width: 32px;
+}
+.insta__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.insta__post--red{
+    background-color: #f00;
+}
+.header__show{
+    display: none;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+}
+@media screen and (max-device-width: 414px){
+    .layout{
+      width: 100%;
+    }
+    .header{
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+    .header__show{
+        display: block;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        background: rgb(0, 0, 0);
+    }
+    .insta{
+        grid-template-columns: 1fr;
+    }
+}
+
